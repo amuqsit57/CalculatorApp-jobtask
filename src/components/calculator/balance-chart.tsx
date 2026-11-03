@@ -14,7 +14,7 @@ export type ChartSeries = {
 const HEIGHT = 280;
 const MARGIN = { top: 16, right: 16, bottom: 32, left: 60 };
 
-const TOOLTIP_WIDTH = 216;
+const TOOLTIP_WIDTH = 264;
 
 /** Round axis steps ($5k, not $6.25k), with at most five of them above zero. */
 function axisTicks(peak: number) {
@@ -247,7 +247,7 @@ export function BalanceChart({
               const balance = balanceAt(s, hoverMonth, principal);
               return (
                 <p key={s.name} className="flex justify-between gap-4">
-                  <span className="text-muted-foreground">{s.name}</span>
+                  <span className="whitespace-nowrap text-muted-foreground">{s.name}</span>
                   <span className="figure">{money(balance ?? 0)}</span>
                 </p>
               );

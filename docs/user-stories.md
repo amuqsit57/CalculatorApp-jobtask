@@ -6,7 +6,7 @@ The starting state called "the example loan" is what the app shows when it opens
 
 Results update as the user types. There is no submit button.
 
-## S-1 (serves J-1, Not implemented)
+## S-1 (serves J-1, Implemented)
 
 As a First-time Car Buyer, I want to enter a car's price, my down payment, the rate and the loan length, so that I can see what the car will cost me in total.
 
@@ -16,7 +16,7 @@ As a First-time Car Buyer, I want to enter a car's price, my down payment, the r
 - Given the largest values allowed (car price $2,000,000, down payment 0, APR 50%, 10 years), when I look at the results, then the monthly payment is $83,959.40, total interest is $8,075,113.78, and no number is shown in scientific notation or cut off.
 - Given a monthly payment that does not divide exactly into the loan, when I look at the results, then the last payment is adjusted and shown, so the repayments add up to the loan plus interest to the cent.
 
-## S-2 (serves J-1, Not implemented)
+## S-2 (serves J-1, Implemented)
 
 As a First-time Car Buyer, I want a clear message when something I typed cannot be used, so that I can fix it and never rely on a wrong figure.
 
@@ -35,7 +35,7 @@ As a First-time Car Buyer, I want a clear message when something I typed cannot 
 - Given any field has an error, when I look at the results area, then I see "Fix the marked fields to see your numbers." and no costs are shown.
 - Given a field has an error, when I correct it, then the message goes away and the results come back with the right values, without reloading the page.
 
-## S-3 (serves J-2, Not implemented)
+## S-3 (serves J-2, Implemented)
 
 As a First-time Car Buyer, I want to compare different loan lengths side by side, so that I can see what a lower monthly payment really costs.
 
@@ -53,7 +53,7 @@ As a First-time Car Buyer, I want to compare different loan lengths side by side
 - Given I type a loan length of 9, when I look at the comparison, then a 9-year row is added and marked as my choice.
 - Given a field has an error, when I look at the results area, then the comparison is not shown.
 
-## S-4 (serves J-3, Not implemented)
+## S-4 (serves J-3, Implemented)
 
 As a First-time Car Buyer, I want to see what happens if I pay more each month, so that I can decide whether the extra is worth it.
 
@@ -63,7 +63,7 @@ As a First-time Car Buyer, I want to see what happens if I pay more each month, 
 - Given I have changed the payment, when I select "Back to the agreed payment", then the payment returns to $500.95.
 - Given I have changed the payment, when I change the price, down payment, APR, loan length or compounding, then the payment resets to the new agreed payment.
 
-## S-5 (serves J-3, Not implemented)
+## S-5 (serves J-3, Implemented)
 
 As a First-time Car Buyer, I want to see what happens if I pay less each month, so that I know the danger before I fall short.
 
@@ -76,7 +76,7 @@ As a First-time Car Buyer, I want to see what happens if I pay less each month, 
 - Given I enter a payment lower than agreed, when I look at the result, then I see a reminder that paying less than agreed normally needs the lender's approval and that late fees are not counted.
 - Given the payment has an error, when I correct it, then the message goes away and the result comes back.
 
-## S-6 (serves J-4, Not implemented)
+## S-6 (serves J-4, Implemented)
 
 As a First-time Car Buyer, I want to see how the interest builds up over the life of the loan, so that I can understand what I am paying for.
 

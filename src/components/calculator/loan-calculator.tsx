@@ -58,7 +58,7 @@ export function LoanCalculator() {
       <form
         aria-label="Your loan"
         onSubmit={(event) => event.preventDefault()}
-        className="grid gap-5 border-t-4 border-foreground pt-4 lg:sticky lg:top-6"
+        className="panel-green panel-raised mr-1.5 grid gap-5 p-5 lg:sticky lg:top-6"
       >
         <h2 className="eyebrow">Your loan</h2>
         <MoneyField
@@ -179,7 +179,8 @@ function Summary({ loan, plan }: { loan: ValidLoan; plan: Plan }) {
   const carCost = plan.totalPaid + loan.downCents;
 
   return (
-    <section aria-label="What it costs" className="border-t-4 border-foreground pt-4">
+    <section aria-label="What it costs">
+      <div className="panel-green p-5 sm:p-6">
       <p className="eyebrow">Monthly payment</p>
       <p className="figure mt-1 text-[clamp(2.75rem,8vw,5rem)] leading-none font-medium break-words">
         {money(plan.payment)}
@@ -196,6 +197,7 @@ function Summary({ loan, plan }: { loan: ValidLoan; plan: Plan }) {
           Rounding to the cent makes your last payment {money(plan.finalPayment)}.
         </p>
       )}
+      </div>
 
       <dl className="depth-panel mt-6 mr-2 grid border border-foreground sm:grid-cols-3">
         {[
@@ -381,7 +383,7 @@ function SectionHeading({
   children: React.ReactNode;
 }) {
   return (
-    <header className="mb-4 max-w-prose">
+    <header className="mb-4 max-w-prose border-l-4 border-[#c4511c] pl-3">
       <h2 id={id} className="text-2xl font-bold tracking-tight">
         {title}
       </h2>

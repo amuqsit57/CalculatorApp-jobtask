@@ -49,23 +49,23 @@
 }
 
 :root {
-  --background: #eef0ea;
+  --background: #dbe7dc;
   --foreground: #17211d;
-  --card: #fbfbf8;
+  --card: #fbfcf7;
   --card-foreground: #17211d;
   --popover: #fbfbf8;
   --popover-foreground: #17211d;
   --primary: #123b2f;
   --primary-foreground: #f6f7f2;
-  --secondary: #e2e6dd;
+  --secondary: #cfdfd1;
   --secondary-foreground: #17211d;
-  --muted: #e6e9e1;
-  --muted-foreground: #55615b;
-  --accent: #dfe7dc;
+  --muted: #cfdfd1;
+  --muted-foreground: #46564e;
+  --accent: #c6dcc9;
   --accent-foreground: #123b2f;
   --destructive: #a32d17;
-  --border: #c5cbc0;
-  --input: #8b958d;
+  --border: #aebfb1;
+  --input: #7a8c7f;
   --ring: #123b2f;
   --chart-1: #2d6a9f;
   --chart-2: #c4511c;
@@ -123,9 +123,9 @@
     background: linear-gradient(
       90deg,
       #123b2f 0 34%,
-      #eef0ea 34% 42%,
+      #dbe7dc 34% 42%,
       #2d6a9f 42% 70%,
-      #eef0ea 70% 78%,
+      #dbe7dc 70% 78%,
       #c4511c 78% 100%
     );
     will-change: transform;
@@ -211,6 +211,48 @@
     opacity: 1;
     transform: none;
   }
+}
+
+/* Deep green areas. Redefining the tokens here means everything inside, including
+   form fields and error messages, picks up colours that work on green. */
+.panel-green {
+  --foreground: #f3f6ee;
+  --muted-foreground: #bcd0c2;
+  --card: #0c2c23;
+  --input: #7fa08f;
+  --border: #2f5a4a;
+  --destructive: #ffb9a8;
+  --primary: #f2b632;
+  --ring: #f2b632;
+  background: #123b2f;
+  color: var(--foreground);
+}
+
+.panel-raised {
+  box-shadow: 6px 6px 0 #c4511c;
+}
+
+/* The same stripes the car leaves behind in the intro. */
+.livery-stripes {
+  height: 14px;
+  background: linear-gradient(
+    180deg,
+    #2d6a9f 0 43%,
+    #dbe7dc 43% 57%,
+    #c4511c 57% 100%
+  );
+}
+
+[data-slot="table"] {
+  background: var(--card);
+}
+
+[data-slot="table-header"] {
+  background: #123b2f;
+}
+
+[data-slot="table-head"] {
+  color: #f3f6ee;
 }
 
 /* Keep the "Loan" word's final colour on devices that skip the animation. */

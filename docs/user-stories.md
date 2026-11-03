@@ -2,15 +2,15 @@
 
 How the app helps them get the job done. All amounts are in US dollars.
 
-The starting state called "the example loan" is what the app shows when it opens: car price $28,000, down payment $3,000, APR 7.5%, loan length 5 years, compounded monthly. That means $25,000 is borrowed.
+The starting state called "the example loan" is what the calculator shows when it first appears, after the welcome screen: car price $28,000, down payment $3,000, APR 7.5%, loan length 5 years, compounded monthly. That means $25,000 is borrowed.
 
-Results update as the user types. There is no submit button.
+The Calculate button on the welcome screen opens the calculator (see S-10). After that, results update as the user types, with no further button to press.
 
 ## S-1 (serves J-1, Implemented)
 
 As a First-time Car Buyer, I want to enter a car's price, my down payment, the rate and the loan length, so that I can see what the car will cost me in total.
 
-- Given the app has just opened, when I look at the results, then I see a monthly payment of $500.95, total interest of $5,056.96, total loan repayments of $30,056.96, and a total car cost of $33,056.96 (repayments plus down payment).
+- Given the calculator has just appeared, when I look at the results, then I see a monthly payment of $500.95, total interest of $5,056.96, total loan repayments of $30,056.96, and a total car cost of $33,056.96 (repayments plus down payment).
 - Given the example loan, when I change the APR to 0, then the monthly payment is $416.67, total interest is $0.00, and total repayments are exactly $25,000.00.
 - Given the smallest loan allowed (car price $100, down payment 0, APR 7.5%, 1 year), when I look at the results, then the monthly payment is $8.68 and total interest is $4.09.
 - Given the largest values allowed (car price $2,000,000, down payment 0, APR 50%, 10 years), when I look at the results, then the monthly payment is $83,959.40, total interest is $8,075,113.78, and no number is shown in scientific notation or cut off.
@@ -97,3 +97,15 @@ As a First-time Car Buyer, I want to see the effect of a one-off lump-sum paymen
 ## S-9 (serves J-2, Not implemented)
 
 As a First-time Car Buyer, I want to compare offers from two lenders side by side, so that I can pick the better deal.
+
+## S-10 (serves J-1, Implemented)
+
+As a First-time Car Buyer, I want a short welcome that makes clear this is a car loan calculator and lets me start when I am ready, so that I know I am in the right place before I work out what I can afford.
+
+- Given my device allows animation, when I open the app, then a 3D car with rocket flames flies across the screen, the page changes from dark to light as it passes, "Car Loan Calculator" falls from the top, and a Calculate button appears, all within about 5 seconds.
+- Given the welcome screen is showing, when I press Calculate, then the calculator appears with the example loan, and I can use every other story in this list as written.
+- Given the car is still flying, when I press "Skip intro", then the calculator appears straight away.
+- Given the Calculate button has appeared, when I press Enter without using the mouse, then the calculator appears.
+- Given my device is set to reduce motion, when I open the app, then no car is shown and the title and Calculate button appear straight away, without animation.
+- Given my browser cannot display 3D graphics, when I open the app, then the title and Calculate button still appear, with no error shown, and the calculator works.
+- Given I reload the page, when it opens, then the welcome plays again and the calculator is back to the example loan.

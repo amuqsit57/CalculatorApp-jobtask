@@ -8,6 +8,8 @@ A car loan calculator for **first-time car buyers**. It shows the monthly paymen
 
 **Why this one role:** the need belongs to one kind of person, so the app has one role. See [App Roles](docs/app-roles.md).
 
+**Opening sequence:** the app opens with a short 3D animation of a rocket-powered car, then a Calculate button that opens the calculator. The car is built in code with Three.js, so no model files or online services are needed. The animation can be skipped, and it is replaced with a plain title screen when the device is set to reduce motion or the browser cannot display 3D graphics.
+
 ## Prerequisites
 
 - Node.js 22 (built and tested with v22.14.0)
@@ -39,7 +41,7 @@ npm test
 
 These are automated tests of the loan calculations and input validation in `src/lib`. Their expected figures came from a separate script, not from the app's own code.
 
-Every acceptance criterion of the stories marked Implemented was also checked in the running production build, with a scripted browser run in Microsoft Edge and Google Chrome on Windows. That script is not part of this repository. Firefox and Safari have not been tested.
+Every acceptance criterion of the stories marked Implemented was also checked in the running production build, with a scripted browser run in Microsoft Edge and Google Chrome on Windows. The opening sequence was checked the same way in Edge, including skipping it, using only the keyboard, the reduce-motion setting and a browser with 3D graphics turned off. These scripts are not part of this repository. Firefox and Safari have not been tested.
 
 ## AI tool and model
 

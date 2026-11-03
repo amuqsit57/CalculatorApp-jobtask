@@ -197,7 +197,7 @@ function Summary({ loan, plan }: { loan: ValidLoan; plan: Plan }) {
         </p>
       )}
 
-      <dl className="mt-6 grid border border-foreground sm:grid-cols-3">
+      <dl className="depth-panel mt-6 mr-2 grid border border-foreground sm:grid-cols-3">
         {[
           ["Total interest", plan.totalInterest, "What borrowing costs you"],
           ["Total repayments", plan.totalPaid, `${plan.months} payments, with interest`],

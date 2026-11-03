@@ -108,4 +108,155 @@
     text-transform: uppercase;
     color: var(--muted-foreground);
   }
+
+  /* Hard offset shadow: lifts a panel off the page, like a card on a desk. */
+  .depth-panel {
+    box-shadow:
+      1px 1px 0 var(--foreground),
+      2px 2px 0 var(--foreground),
+      3px 3px 0 var(--foreground),
+      8px 8px 0 color-mix(in oklab, var(--foreground) 16%, transparent);
+  }
+
+  /* The burst of colour along the edge of the sweep as the car passes. */
+  .sweep-edge {
+    background: linear-gradient(
+      90deg,
+      #123b2f 0 34%,
+      #eef0ea 34% 42%,
+      #2d6a9f 42% 70%,
+      #eef0ea 70% 78%,
+      #c4511c 78% 100%
+    );
+    will-change: transform;
+  }
+
+  .title-stage {
+    perspective: 900px;
+  }
+
+  .fall-in {
+    display: inline-block;
+    transform-origin: 50% 100%;
+    animation: fall-in 900ms cubic-bezier(0.3, 0.7, 0.3, 1) both;
+  }
+
+  .title-twitch {
+    animation:
+      fall-in 900ms cubic-bezier(0.3, 0.7, 0.3, 1) both,
+      colour-twitch 1500ms steps(1) 500ms both;
+  }
+
+  .rise-in {
+    animation: rise-in 500ms ease-out 850ms both;
+  }
+
+  .calc-enter {
+    transform-origin: 50% 0;
+    animation: calc-enter 650ms cubic-bezier(0.2, 0.75, 0.25, 1) backwards;
+  }
+}
+
+@keyframes fall-in {
+  0% {
+    transform: translateY(-110vh) rotateX(-75deg);
+  }
+  62% {
+    transform: translateY(0) rotateX(0);
+  }
+  76% {
+    transform: translateY(-5vh) rotateX(14deg);
+  }
+  90% {
+    transform: translateY(0) rotateX(0);
+  }
+  95% {
+    transform: translateY(-1vh);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes colour-twitch {
+  0% {
+    color: #2d6a9f;
+  }
+  40% {
+    color: #1f8a68;
+  }
+  75%,
+  100% {
+    color: #c4511c;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes calc-enter {
+  from {
+    opacity: 0;
+    transform: perspective(1400px) translateY(70px) rotateX(16deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Keep the "Loan" word's final colour on devices that skip the animation. */
+.title-twitch {
+  color: #c4511c;
+}
+
+/* Outside the layers, because the button's focus ring would otherwise replace this
+   shadow, and the button is focused as soon as it appears. */
+.press-3d {
+  box-shadow:
+    1px 1px 0 #c4511c,
+    2px 2px 0 #c4511c,
+    3px 3px 0 #c4511c,
+    4px 4px 0 #c4511c,
+    5px 5px 0 #c4511c,
+    6px 6px 0 #c4511c;
+  transition:
+    translate 90ms ease-out,
+    box-shadow 90ms ease-out;
+}
+
+.press-3d:focus-visible {
+  outline: none;
+}
+
+/* The button takes focus as it appears, so show the ring only once a keyboard is in use. */
+[data-keyboard] .press-3d:focus-visible {
+  outline: 3px solid var(--foreground);
+  outline-offset: 9px;
+}
+
+.press-3d:hover {
+  translate: -1px -1px;
+}
+
+.press-3d:active {
+  translate: 5px 5px;
+  box-shadow: 1px 1px 0 #c4511c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fall-in,
+  .title-twitch,
+  .rise-in,
+  .calc-enter {
+    animation: none;
+  }
 }

@@ -8,7 +8,7 @@ A car loan calculator for **first-time car buyers**. It shows the monthly paymen
 
 **Why this one role:** the need belongs to one kind of person, so the app has one role. See [App Roles](docs/app-roles.md).
 
-**Opening sequence:** the app opens with a short 3D animation of a rocket-powered car, then a Calculate button that opens the calculator. The car is built in code with Three.js, so no model files or online services are needed. The animation can be skipped, and it is replaced with a plain title screen when the device is set to reduce motion or the browser cannot display 3D graphics.
+**Opening sequence:** the app opens with a short 3D animation of a rocket-powered car, then a Calculate button that opens the calculator. The car then does a backflip across the screen, returns along the line under the header, and parks there as the logo. The car is built in code with Three.js, so no model files or online services are needed. The animation can be skipped, and it is replaced with a plain title screen when the device is set to reduce motion or the browser cannot display 3D graphics.
 
 ## Prerequisites
 

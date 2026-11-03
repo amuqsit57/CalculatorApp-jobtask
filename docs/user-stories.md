@@ -104,8 +104,11 @@ As a First-time Car Buyer, I want a short welcome that makes clear this is a car
 
 - Given my device allows animation, when I open the app, then a 3D car with rocket flames flies across the screen, the page changes from dark to light as it passes, "Car Loan Calculator" falls from the top, and a Calculate button appears, all within about 5 seconds.
 - Given the welcome screen is showing, when I press Calculate, then the calculator appears with the example loan, and I can use every other story in this list as written.
-- Given the car is still flying, when I press "Skip intro", then the calculator appears straight away.
+- Given my device allows animation, when I press Calculate, then the car comes in from the bottom left, does a backflip and leaves at the top right, then returns from the right along the line under the header, brakes, its exhaust stops, and it stays parked on that line to the right of the heading as the logo.
+- Given the car is still moving after I press Calculate, when I type in a calculator field, then the field accepts my typing and the results update.
+- Given the car is parked as the logo, when I scroll the page or resize the window, then it stays in its place on the line under the heading.
+- Given the car is still flying on the welcome screen, when I press "Skip intro", then the calculator appears straight away with the car already parked as the logo.
 - Given the Calculate button has appeared, when I press Enter without using the mouse, then the calculator appears.
-- Given my device is set to reduce motion, when I open the app, then no car is shown and the title and Calculate button appear straight away, without animation.
-- Given my browser cannot display 3D graphics, when I open the app, then the title and Calculate button still appear, with no error shown, and the calculator works.
+- Given my device is set to reduce motion, when I open the app, then no car flies and the title and Calculate button appear straight away, without animation, and pressing Calculate shows the car already parked as the logo.
+- Given my browser cannot display 3D graphics, when I open the app, then the title and Calculate button still appear, with no error shown, and the calculator works with no car.
 - Given I reload the page, when it opens, then the welcome plays again and the calculator is back to the example loan.

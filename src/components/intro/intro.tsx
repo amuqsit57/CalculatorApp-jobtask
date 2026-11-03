@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const FLY_BY_TIME_LIMIT_MS = 7000;
 const TITLE_WORDS = ["Car", "Loan", "Calculator"];
 
-export function Intro({ onStart }: { onStart: () => void }) {
+export function Intro({ onCalculate, onSkip }: { onCalculate: () => void; onSkip: () => void }) {
   const [showTitle, setShowTitle] = useState(false);
   const canvas = useRef<HTMLCanvasElement>(null);
   const paper = useRef<HTMLDivElement>(null);
@@ -104,7 +104,7 @@ export function Intro({ onStart }: { onStart: () => void }) {
           <Button
             ref={calculate}
             type="button"
-            onClick={onStart}
+            onClick={onCalculate}
             className="rise-in press-3d h-14 rounded-none px-10 text-lg font-bold"
           >
             Calculate
@@ -114,7 +114,7 @@ export function Intro({ onStart }: { onStart: () => void }) {
         <Button
           type="button"
           variant="outline"
-          onClick={onStart}
+          onClick={onSkip}
           className="absolute top-4 right-4 h-10 px-4"
         >
           Skip intro
